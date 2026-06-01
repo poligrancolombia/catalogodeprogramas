@@ -482,16 +482,16 @@
 
 // ============================================================
 // CARGA DINÁMICA DESDE GOOGLE SHEETS VÍA APPS SCRIPT
-// Reemplaza https://script.google.com/macros/s/AKfycbwnj5IU_OQWY7FPKNhlBkTTkoQJoC37Bj10zNY2VjFMxpIc0j2HNOWP-5ADTT-C5tMN/exec con la URL de tu deployment
+// Reemplaza https://script.google.com/macros/s/AKfycbzqAwi9PySJrp2cm-D3RS92oNaxFUA6zQur5juehSMbqPGPZmJlJofKC_dg--G2pPQ/exec con la URL de tu deployment
 // ============================================================
-const https://script.google.com/macros/s/AKfycbzqAwi9PySJrp2cm-D3RS92oNaxFUA6zQur5juehSMbqPGPZmJlJofKC_dg--G2pPQ/exec
+const https://script.google.com/macros/s/AKfycbzqAwi9PySJrp2cm-D3RS92oNaxFUA6zQur5juehSMbqPGPZmJlJofKC_dg--G2pPQ/exec = 'https://script.google.com/macros/s/AKfycbzqAwi9PySJrp2cm-D3RS92oNaxFUA6zQur5juehSMbqPGPZmJlJofKC_dg--G2pPQ/exec';
 
 let DATA = [];
 
 async function loadFromSheets() {
   document.getElementById('grid-container').innerHTML = '<div style="text-align:center;padding:60px;color:#64748b;"><div style="font-size:32px;margin-bottom:12px;">⏳</div>Cargando programas desde Google Sheets...</div>';
   try {
-    const resp = await fetch(https://script.google.com/macros/s/AKfycbwnj5IU_OQWY7FPKNhlBkTTkoQJoC37Bj10zNY2VjFMxpIc0j2HNOWP-5ADTT-C5tMN/exec + '?action=all');
+    const resp = await fetch(https://script.google.com/macros/s/AKfycbzqAwi9PySJrp2cm-D3RS92oNaxFUA6zQur5juehSMbqPGPZmJlJofKC_dg--G2pPQ/exec + '?action=all');
     const json = await resp.json();
 
     if (json.status !== 'ok') throw new Error(json.message || 'Error desconocido');
